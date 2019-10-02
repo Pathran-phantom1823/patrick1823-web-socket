@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/Pathran-phantom1823/patrick1823-web-socket#readme",
   "engines": {
-    "node": "15.3"
+    "node": "10.15"
   },
   "dependencies": {
     "express": "^4.17.1"
