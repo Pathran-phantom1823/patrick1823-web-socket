@@ -1,0 +1,69 @@
+<html lang="en"
+<head>
+  <title>MQTT on WebSocket</title>
+  <link rel="icon" type="image/ico" href="https://lh3.googleusercontent.com/i6Skwc3D1rMxMqORnZNfflDc5lMH44t5zIoE0v4yRQoZJguuar9d5GLYhEfaxSVlZjY";
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel='stylesheet' href="/public/style.css">
+</head>
+<body>
+  <header id="head">
+      <center><h1>MQTT on Websocket</h1></center>
+  </header>
+  <div class="container">
+    <div class="jumbotron" id="subscribecont">
+              <header style="background-color:cyan  ">
+                  <center><h1>Subscribe</h1>
+              </header><br>
+             
+              <input type="text" id="subscribetopic" class='form-control' placeholder="Enter your Topic"><br>
+              <button type="button" class="btn btn-primary" id="subscribe">Subscribe</button>
+              <button type="button" class="btn btn-warning" id="unsubscribe">Unsubscribe</button>
+     </div>           
+  </div>  
+  <div class="container">
+    <div class="jumbotron" id="publishcont">
+                <header style="background-color:#33d6ff">
+                    <center><h1>Publish</h1>
+                </header><br>
+                <input type="text" id="topic" class='form-control' placeholder="Enter your Topic"><br>
+                <input type="text" id="payload" class='form-control' placeholder="Enter your Payload"><br>
+                <hr>
+                <button type="button" class="btn btn-info" id= "publish">Publish</button>
+    </div>
+  </div>
+  <div class="container">
+      <div class="jumbotron" id="brokercont">
+              <header style="background-color:#33ffff">
+                <center><h1>-Broker-</h1></center>
+              </header><br>
+              <input type="text" id="brokerAdd" class='form-control' value="wss://test.mosquitto.org:8081/mqtt"><br>
+              <input type="text" id="connectresult" class='form-control' disabled value="Broker Status"><br>
+              <button type="button" class="btn btn-primary" id="connectbtn">Connect</button>
+              <button type="button" class="btn btn-danger" id="disconnectbtn">Disconnect</button><br>
+  
+              <table>
+                  <thead>
+                      <tr>
+                        <th id="topictr">Topic</th>
+                        <th id="payloadtr">Payload</th>
+                        <th id="timestamp">Time Stamp</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tbody">
+  
+                    </tbody>
+              </table>
+      </div>
+  </div>
+  
+</body>
+<script src="scripts/browserMqtt.js"></script>
+<script src="scripts/controller.js"></script>
+</html>
+
+

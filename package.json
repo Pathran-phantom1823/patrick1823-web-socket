@@ -1,0 +1,25 @@
+{
+  "name": "patrick1823-web-socket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pathran-phantom1823/patrick1823-web-socket.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pathran-phantom1823/patrick1823-web-socket/issues"
+  },
+  "homepage": "https://github.com/Pathran-phantom1823/patrick1823-web-socket#readme",
+  "engines": {
+    "node": "15.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
